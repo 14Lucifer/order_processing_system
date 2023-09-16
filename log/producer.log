@@ -1,0 +1,32 @@
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: None -> <ConnectionState.START: 0>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.START: 0> -> <ConnectionState.HDR_SENT: 2>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.HDR_SENT: 2> -> <ConnectionState.HDR_SENT: 2>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.HDR_SENT: 2> -> <ConnectionState.OPEN_PIPE: 4>
+2023-09-16 23:49:45 [INFO] [producer] Session state changed: <SessionState.UNMAPPED: 0> -> <SessionState.BEGIN_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Management link receiver state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Management link sender state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.OPEN_PIPE: 4> -> <ConnectionState.OPEN_SENT: 7>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.OPEN_SENT: 7> -> <ConnectionState.OPENED: 9>
+2023-09-16 23:49:45 [INFO] [producer] Session state changed: <SessionState.BEGIN_SENT: 1> -> <SessionState.MAPPED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Management link receiver state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Management link sender state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Management link receiver state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Management link sender state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Session state changed: <SessionState.MAPPED: 3> -> <SessionState.END_SENT: 4>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.OPENED: 9> -> <ConnectionState.CLOSE_SENT: 11>
+2023-09-16 23:49:45 [INFO] [producer] Connection state changed: <ConnectionState.CLOSE_SENT: 11> -> <ConnectionState.END: 13>
+2023-09-16 23:49:45 [INFO] [producer] Session state changed: <SessionState.END_SENT: 4> -> <SessionState.DISCARDING: 6>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2023-09-16 23:49:45 [INFO] [producer] Management link sender state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2023-09-16 23:49:45 [INFO] [producer] Management link receiver state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2023-09-16 23:49:45 [INFO] [producer] Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
