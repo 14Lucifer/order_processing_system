@@ -15,6 +15,8 @@ logger = setuplog(appname=script_filename)
 
 import yaml
 import json
+import uuid
+import time
 from azure.servicebus import ServiceBusClient, ServiceBusMessage
 
 
@@ -60,6 +62,13 @@ def count_frequency(count_list):
     return items_count
 
 
+# Create unique order ID based on timestamp and random number
+def order_id_add(msg):
+    timestamp = int(time.time() * 1000)
+    unqiue_id = f'{timestamp}-{str(uuid.uuid1())}'
+    msg['order_id'] = unqiue_id
+    return msg
+
 
 def orders_confirm(orders_count,products):
     # finding order items in the product and return dict with order qty.
@@ -70,8 +79,9 @@ def orders_confirm(orders_count,products):
             if item == product['id']:
                 product['order_qty'] = count
                 final_orders['orders'].append(product)
+    # adding unique order ID
+    final_orders = order_id_add(final_orders)
     return final_orders
-
 
 
 def order_sent(conn_str,queue_name,msg):
@@ -81,6 +91,29 @@ def order_sent(conn_str,queue_name,msg):
         with sender:
             message = ServiceBusMessage(json.dumps(msg))
             sender.send_messages(message)
+
+
+
+def order_tagging(order_dict,taggings):
+    print("Choose tagging to simulate error")
+    for index, item in enumerate(taggings):
+        print(' {}. {}'.format(index+1,item))
+    print(' 0. No Error simulation.')   
+
+    try: 
+        tag_data = int(input('Select and input the number : '))
+    except Exception as e:
+        print("Only number input is supported.\nError message : {}".format(e))
+
+    if tag_data > 0:
+        if tag_data <= len(taggings):
+            order_dict['tag'] = taggings[tag_data-1]
+        else:
+            print("There is only {} options to select. Try again")
+    elif tag_data == 0:
+        order_dict['tag'] = 'No Tag'
+    else:
+        print("Please select from give range.")
 
 
 
@@ -108,6 +141,9 @@ def main():
         for item in final_order['orders']:
             print("  {} : {} PC".format(item['name'],item['order_qty']))
         print("-------------------")
+
+        # Ask for tagging to simulate error scenarios.
+        order_tagging(order_dict=final_order,taggings=config['tagging'])
 
         # Send the final order info to service bus
         order_sent(conn_str=config['servicebus-connstr'],queue_name=config['servicebus-queue'],msg=final_order)

@@ -19,4 +19,9 @@ products:
     currency: AED
     processing_time: 7
     time_measurement: min
+tagging:
+  - order on schedule (msg send after 5mins)
+  - order delayed (msg deferred)
+  - order processing fail (msg delivery max out. Deadletter)
+  - order format error (msg processing time out. Deadletter)
 

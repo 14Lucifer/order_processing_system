@@ -6,7 +6,6 @@ def setuplog(appname):
 
     # Read the data from the YAML file for log dir
     file_path = os.path.join(os.path.dirname(__file__),'..','config','log-config.yaml')
-    print(file_path)
     with open(file_path, 'r') as file:
         loaded_data = yaml.safe_load(file)
 
