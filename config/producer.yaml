@@ -1,23 +1,24 @@
 servicebus-connstr: Endpoint=sb://order-app.servicebus.windows.net/;SharedAccessKeyName=luke-admin;SharedAccessKey=8Gqd4tFPTEqVfwkl5pDEMdoWa/DYs/UbG+ASbBcs3eY=;EntityPath=active-order
 servicebus-queue: active-order
+servicebus-lock-duration: 15
 products:
   - name: pizza
     id: "001"
     price: 10
     currency: AED
-    processing_time: 10
+    processing_time: 1
     time_measurement: min
   - name: fried rice
     id: "002"
     price: 15
     currency: AED
-    processing_time: 5
+    processing_time: 2
     time_measurement: min
   - name: fruit salad
     id: "003"
-    price: 20
+    price: 20s
     currency: AED
-    processing_time: 7
+    processing_time: 5
     time_measurement: min
 tagging:
   - order on schedule (msg send after 5mins)

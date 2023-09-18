@@ -1,2 +1,3 @@
 servicebus-connstr: Endpoint=sb://order-app.servicebus.windows.net/;SharedAccessKeyName=luke-admin;SharedAccessKey=8Gqd4tFPTEqVfwkl5pDEMdoWa/DYs/UbG+ASbBcs3eY=;EntityPath=active-order
 servicebus-queue: active-order
+servicebus-lock-duration: 15
